@@ -1,0 +1,18 @@
+<h2>Login</h2>
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Entrar</button>
+</form>
+
+<!-- Botão para registrar -->
+<div>
+    <p>Não tem uma conta? <a href="{% url 'signup' %}"><button>Registrar</button></a></p>
+</div>
